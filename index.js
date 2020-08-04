@@ -9,7 +9,7 @@ const bot = new TelegramBot(token, {polling: true});
 let playersIdToSend = []; 
 
 const textForStart = `Привет, Друг! Это распределитель ролей для игры "Находка для шпиона". Начнем?`;
-const textForChange = `Команды формируются по ID участников.\n\n@getmyid_bot — чтобы узнать свой ID . \n\n/players — ключ для создания новой команды \n\n"ID игрока_имя" — формат для добавления игроков. Если ты - утка, напиши просто свое имя (kris alex oleg lena artem shake)\n\nПример создания команды:\n/players kris alex 75387637826_boris`;
+const textForChange = `Команды формируются по ID участников.\n\n@getmyid_bot — чтобы узнать свой ID . \n\n/players — ключ для создания новой команды \n\n"ID игрока_имя" — формат для добавления игроков. \n\nПример создания команды:\n/players 56489794521_anna 75387637826_boris`;
 
 
 function getKeyByValue(object, value) {
@@ -194,6 +194,4 @@ bot.on('callback_query', (query) => {
             }
         });
     }
-
-
 });
